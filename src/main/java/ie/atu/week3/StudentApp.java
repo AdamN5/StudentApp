@@ -6,6 +6,8 @@ import java.util.List;
 public class StudentApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        List<Student> StudentList = new ArrayList<>();
+
 
         System.out.println("Enter the number of students: ");
         int numOfStudents = scanner.nextInt();
@@ -19,8 +21,14 @@ public class StudentApp {
             System.out.println("Enter ID of Student.");
             String id = scanner.nextLine();
             Student student = new Student(name, email, id);
-            System.out.println(student);
+            student.getName();
+            student.getEmail();
+            student.getID();
+            StudentList.add(student);
             i++;
+        }
+        for(Student student : StudentList){
+            System.out.println("Name: " + student.getName());
         }
 
     }
