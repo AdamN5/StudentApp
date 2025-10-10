@@ -28,8 +28,7 @@ public class StudentApp {
             i++;
         }
         for(Student student : StudentList){
-            System.out.println("Name: " + student.getName());
+            System.out.println(student);
         }
-
     }
 }
